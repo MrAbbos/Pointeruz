@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap");
+
+$base-color: #21bca0;
+
+.Form {
+  .label {
+    display: block;
+    color: #fff;
+    .seriaPasport{
+      display: flex;
+      .inputSer{
+        width: 20%;
+      }
+      .inputNum{
+        margin-left: 5%;
+        width: 75%;
+      }
+    }
+    .Region{
+      background-color: transparent;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      // color: rgba(248, 248, 248, 0.15);
+      &:focus{
+        outline: none;
+        border: 1px solid $base-color;
+      }
+    }
+    p {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    input {
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 100%;
+      padding: 10px;
+      color: #fff;
+      &:focus {
+        outline: none;
+        border: 1px solid $base-color;
+      }
+      &::placeholder {
+        color: rgba(248, 248, 248, 0.15);
+      }
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      background-image: url(./img/Group.svg);
+      color: #21bca0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }    
+    input[type="tel"] {
+      padding: 13px;
+      border: 1px solid #ffffff;
+      height: 100%;
+      &:focus {
+        border: none;
+        box-shadow: none;
+        border: 1px solid $base-color;
+      }
+    }
+    .selected-flag {
+      display: none;
+    }
+    .flag-dropdown {
+      display: none;
+    }
+  }
+}
