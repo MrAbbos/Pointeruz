@@ -17,7 +17,7 @@ function WarkerPage() {
   }
   return (
     <div>
-      <div className={"TabPage"}>
+      <div className={"WarkerPage"}>
         <Tabs selected={0}>
           <Panel title="Personal Details">
             <Personal />

@@ -17,7 +17,7 @@ function TeacherPage() {
   }
   return (
     <div>
-      <div className={"TabPage"}>
+      <div className={"TeacherTabPage"}>
         <Tabs selected={0}>
           <Panel title="Personal Details">
             <Personal />

@@ -6,7 +6,7 @@ import "./Styles.scss";
 
 function Education() {
   return (
-    <div className={"Educatoion"}>
+    <div className={"TeacherEducatoion"}>
       <div className={"row"}>
         <div className={"col-md-4"}>
           <Form
