@@ -1,23 +1,18 @@
-import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import imageFull from './Components/Language/imageFull/imageFull';
-import Language from './Components/Language/Language';
-import Navbar from './Components/Navbar/Navbar';
-import News from './Components/News/News';
-import Registration from './Components/Registration/Home/Registration';
-// import "swiper/css/bundle";
-
+import { Route, Switch } from "react-router-dom";
+import "./App.scss";
+import Login from "./Components/Login/Login";
+import NavbarHead from "./Components/NavbarHead/NavbarHead";
+import Registration from "./Components/Registration/Home/Registration";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Switch>
-      <Route path="/news" >
-        <News/>
-      </Route>
-      <Route component={Language} path="/ProgLanguage" />
-      <Route component={Registration} path="/Register" />
+      <div className={"NavbarHeader"} >
+        <NavbarHead />
+      </div>
+      <Switch className={"body"} >
+        <Route component={Registration} path="/Register" />
+        <Route component={Login} path="/Login" />
       </Switch>
     </div>
   );

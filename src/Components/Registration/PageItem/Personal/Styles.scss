@@ -1,7 +1,54 @@
-$base-color: #21bca0;
+$base-color: #79D9EE;
 .Personal {
+  padding-bottom: 50px;
   .col-md-6 {
     margin-top: 20px;
+  }
+  .col-md-4 {
+    margin-top: 20px;
+  }
+  .radioButton {
+    font-family: Montserrat;
+    p{
+      margin: 5px;
+    }
+    .radioInput{
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+    }
+    label {
+      position: relative;
+      input[type="radio"]{
+        display: none;
+        margin-left: 5px;
+      }
+      span{
+        margin-left: 5px;
+        top: 9px;
+        left: -1px;
+        border-radius: 11px;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        display: block;
+      }
+      &::after {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin: 0 5px 0 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 11px;
+        border: 2px solid $base-color;
+      }
+      input[type="radio"]:checked +span {
+        background-color: $base-color;
+        box-shadow: 0px 0px 16.4444px #21BCA0, 0px 0px 16.4444px #21BCA0;
+      }
+    }
   }
   .uploadImage {
     margin-top: 40px;
@@ -18,7 +65,7 @@ $base-color: #21bca0;
       margin: 20px 0;
       color: #fff;
       position: relative;
-      .uploadImageInput{
+      .uploadImageInput {
         position: absolute;
         top: 0;
         bottom: 0;

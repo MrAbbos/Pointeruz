@@ -1,0 +1,49 @@
+$base-color: #79D9EE;
+
+.TabPage {
+  .Agreement,.Finish{
+    height: 60vh;
+  }
+  .bottomPlusEdu {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    .cirlce-button {
+      width: 50px !important ;
+      height: 50px !important ;
+      background-color: $base-color;
+      border-radius: 50%;
+      padding: 5px 10px 10px 10px;
+      cursor: pointer;
+    }
+    .line-button {
+      width: 620px;
+      height: 1px;
+      background: #64a3b0;
+      margin: -10px 45px;
+    }
+  }
+  ul.inline {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    li {
+      display: inline-block;
+      padding: 10px;
+      transition: all 0.5s;
+      font-weight: 300;
+      cursor: pointer;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  .tab {
+    width: 100%;
+    padding: 25px;
+    color: #333;
+  }
+}

@@ -1,29 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap");
 
-$base-color: #21bca0;
+$base-color: #79D9EE;
 
 .Form {
   .label {
     display: block;
     color: #fff;
-    .seriaPasport{
+    .seriaPasport {
       display: flex;
-      .inputSer{
+      .inputSer {
         width: 20%;
       }
-      .inputNum{
+      .inputNum {
         margin-left: 5%;
         width: 75%;
       }
     }
-    .Region{
+    .Region {
       background-color: transparent;
       width: 100%;
       padding: 10px;
       border: 1px solid #ffffff;
       border-radius: 4px;
-      // color: rgba(248, 248, 248, 0.15);
-      &:focus{
+      color: rgba(248, 248, 248, 0.15);
+      -moz-appearance: none; /* Firefox */
+      -webkit-appearance: none; /* Safari and Chrome */
+      appearance: none;
+      background-image: url(./img/down.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 15px) 0.5em, calc(100% - 20px) 2em,
+        calc(100% - 0.5em) 0.5em;
+      background-size: 23px 20px, 23px 23px, 1.5em 1.5em;
+      background-repeat: no-repeat;
+      &:focus {
+        background-image: url(./img/up.svg);
+      }
+      option {
+        color: #000;
+      }
+      &:focus {
         outline: none;
         border: 1px solid $base-color;
       }
@@ -56,13 +71,17 @@ $base-color: #21bca0;
       background-image: url(./img/Group.svg);
       color: #21bca0;
     }
-    input[type=number] {
+    input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+      background-image: url(./img/Group.svg);
+      color: #21bca0;
+    }
+    input[type="number"] {
       -moz-appearance: textfield;
     }
-    input[type=number]::-webkit-inner-spin-button {
+    input[type="number"]::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
-    }    
+    }
     input[type="tel"] {
       padding: 13px;
       border: 1px solid #ffffff;

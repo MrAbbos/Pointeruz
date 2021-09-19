@@ -11,12 +11,13 @@ function Form({
   placeholder2,
   typeSer,
   typeNum,
+  data,
 }) {
   const [phoneNumber, setPhoneNumber] = useState("+998");
   return (
     <div className={"Form"}>
       <label className={"label"}>
-        <p>
+        <p className={'mb-1'} >
           {label} <span style={{ color: "#EB5757" }}>*</span>
         </p>
         {type === "tel" ? (
@@ -45,17 +46,15 @@ function Form({
             />
           </div>
         ) : type === "select" ? (
-          <select className={"Region"} aria-label=".form-select-sm example" id="cars" name="cars">
-            <option value="Toshkent">Toshkent</option>
-            <option value="Samarqand">Samarqand</option>
-            <option value="Jizzax">Jizzax</option>
-            <option value="Buxoro">Buxoro</option>
-            <option value="Namangan">Namangan</option>
-            <option value="Qashqadaryo">Qashqadaryo</option>
-            <option value="Qoraqalpog'iston">Qoraqalpog'iston</option>
-            <option value="Andijon">Andijon</option>
-            <option value="Farg'ona">Farg'ona</option>
-            <option value="Surxandaryo">Surxandaryo</option>
+          <select
+            className={"Region"}
+            aria-label=".form-select-sm example"
+            id="cars"
+            name="cars"
+          >
+            {data.map((item) => (
+              <option value={item.option}>{item.option}</option>
+            ))}
           </select>
         ) : (
           <input

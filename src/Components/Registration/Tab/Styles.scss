@@ -1,0 +1,51 @@
+$base-color: #79D9EE;
+#tabTitleId {
+  position: relative;
+  align-items: center;
+  input {
+    margin: 15px;
+    margin-left: 7px;
+    margin-top: 25px;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    transition-duration: 0.3s;
+    background-color: rgba(248, 248, 248, 0.2);
+    cursor: pointer;
+    border-radius: 50%;
+    .checkIcon {
+      position: absolute !important;
+      left: -20px !important;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .tabTitleInput {
+    background-color: $base-color;
+    box-shadow: 0px 0px 20px $base-color;
+  }
+  li {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .whiteText {
+    color: #fff;
+  }
+  .silverText {
+    color: rgba(248, 248, 248, 0.2);
+  }
+}
+.tabTitle {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 188, 160, 0) 10.23%,
+    rgba(33, 188, 160, 0.2) 100%
+  );
+  border-bottom: 3px solid $base-color;
+  li {
+    color: #fff !important;
+  }
+}
