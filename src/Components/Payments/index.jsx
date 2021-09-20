@@ -8,12 +8,120 @@ function Payments  ()  {
   return (
       <div className={"page-content"}>
         <p className="header_theme">Payment</p>
-        <form action="" style={{position:"relative", marginBottom:"20px"}}>
-          <input type="text" className="search_input" placeholder="Search" />
-          <img src={SearchIcon} className="search_icon" alt="" />
-        </form>
-          <p>Payment Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus laboriosam neque architecto minima blanditiis omnis quaerat exercitationem libero explicabo voluptatibus corrupti, excepturi delectus? Incidunt nemo sunt alias veritatis modi sit deserunt repellat est hic totam ut cum natus magnam optio illo commodi ipsam architecto autem numquam debitis vel at, qui excepturi aut? Expedita aliquid illum vitae vero rerum repudiandae. Minima, beatae! Tenetur debitis at praesentium nulla tempore laudantium, reprehenderit itaque hic, exercitationem ab natus voluptatum saepe pariatur fugiat fugit eos dolore adipisci rerum enim quam quae suscipit. Earum perferendis, odit sed veritatis, sapiente esse vel expedita reprehenderit nemo eligendi aliquid!</p>
+        <div className="d-flex justify-content-between">
+          <form action="" style={{position:"relative", marginBottom:"20px"}}>
+            <input type="text" className="search_input" placeholder="Search" />
+            <img src={SearchIcon} className="search_icon" alt="" />
+          </form>
+          <button className="add_btn">Add</button>
         </div>
+        <div className="scroll-top">
+          <div className="scroll_table">
+            <table className="w-100">
+              <thead>
+                <tr className="table_header">
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="table_body">
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <th>Company</th>
+                  <th>Contact</th>
+                  <th>Country</th>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr className="table_body">
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
   )
 }
 export default Payments
