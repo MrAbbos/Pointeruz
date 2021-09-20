@@ -8,8 +8,8 @@ import WarkerPage from "../WarkerPage/WarkerPage";
 import "./Styles.scss";
 
 function Registration() {
-  return (
-    <div className={"Registration"}>
+  return ( 
+  <div className={"Registration"}>
       <div className={"container"}>
         <div className={"body"}>
           <div className={"title"}>

@@ -1,0 +1,45 @@
+.page-content{
+  padding: 30px 40px;
+
+  .header_theme{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #79D9EE;
+  }
+  .search_input{
+    width: 301px !important;
+    height: 40px !important;
+    border: 1px solid #7285A9 !important;
+    box-sizing: border-box !important;
+    border-radius: 4px !important;
+    background-color: transparent !important;
+    padding-left: 44px !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(248, 248, 248, 0.4);
+
+    &::placeholder{font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px !important;
+      line-height: 20px;
+      color: rgba(248, 248, 248, 0.4);
+    }
+    &:focus{
+      outline: none !important;
+      border: 1px solid #64A3B0 !important;
+    }
+  }
+  .search_icon{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+
+}

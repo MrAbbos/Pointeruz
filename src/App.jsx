@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Login from "./Components/Login/Login";
 import NavbarHead from "./Components/NavbarHead/NavbarHead";
+import Payments from "./Components/Payments";
 import Registration from "./Components/Registration/Home/Registration";
 import SideNav from "./Components/SideNav/SideNav";
 
@@ -23,6 +24,7 @@ function App() {
         <div className={`right-body ${isOpenClass}-right-body`}>
           <Switch className={"body"}>
             <Route component={Registration} path="/Register" />
+            <Route component={Payments} path="/Payments" />
             <Route component={Login} path="/Login" />
           </Switch>
         </div>

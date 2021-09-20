@@ -7,7 +7,7 @@ import listOfWorkers from "./img/listOfWorkers.svg";
 import payment from "./img/payment.svg";
 import group from "./img/group.svg";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const SideNav = ({ isOpen, handling }) => {
   const [isActive, setIsActive] = useState("");
@@ -59,6 +59,7 @@ const SideNav = ({ isOpen, handling }) => {
         </div>
       </div>
       <div className="nav__element" onClick={() => setIsActive("nav__student")}>
+
         <div
           id={isActive === "nav__student" ? "active" : ""}
           className="nav__el__content"
@@ -89,13 +90,15 @@ const SideNav = ({ isOpen, handling }) => {
         </div>
       </div>
       <div className="nav__element" onClick={() => setIsActive("nav__payment")}>
-        <div
-          className="nav__el__content"
-          id={isActive === "nav__payment" ? "active" : ""}
-        >
-          <img src={payment} />
-          <span className={showOrNot}>Payment</span>
-        </div>
+        <NavLink to="/Payments">
+          <div
+            className="nav__el__content"
+            id={isActive === "nav__payment" ? "active" : ""}
+          >
+            <img src={payment} />
+            <span className={showOrNot}>Payment</span>
+          </div>
+        </NavLink>
       </div>
       <div className="nav__element" onClick={() => setIsActive("nav__group")}>
         <div
