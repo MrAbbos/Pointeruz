@@ -11,10 +11,14 @@ import { Link } from "react-router-dom";
 
 const SideNav = ({ isOpen, handling }) => {
   const [isActive, setIsActive] = useState("");
+  const [isDropdownOpen, setDropdown] = useState(false);
+
   let showOrNot = isOpen ? "" : "hide";
+  let showNavLogo = isOpen ? "" : "nav__closed";
+
   return (
-    <div className="side__nav">
-      <div className="side__button">
+    <div className={`side__nav ${showNavLogo}`}>
+      <div className="nav__button">
         <button onClick={() => handling()}>
           <img src={hamburger} />
         </button>
@@ -26,11 +30,12 @@ const SideNav = ({ isOpen, handling }) => {
         <div
           id={isActive === "nav__reg" ? "active" : ""}
           className="nav__el__content"
+          onClick={() => setDropdown(isDropdownOpen ? "" : "hide")}
         >
           <img src={regLogo} />
           <span className={showOrNot}>Registration</span>
         </div>
-        <div className="drop-down">
+        <div className={`drop-down ${isDropdownOpen}`}>
           <ul className={showOrNot}>
             <Link
               style={{ textDecoration: "none", color: "white" }}
@@ -62,26 +67,41 @@ const SideNav = ({ isOpen, handling }) => {
           <span className={showOrNot}>List of students</span>
         </div>
       </div>
-      <div className="nav__element">
-        <div className="nav__el__content">
+      <div
+        className="nav__element"
+        onClick={() => setIsActive("nav__teachers")}
+      >
+        <div
+          className="nav__el__content"
+          id={isActive === "nav__teachers" ? "active" : ""}
+        >
           <img src={listOfTeachers} />
           <span className={showOrNot}>List of teachers</span>
         </div>
       </div>
-      <div className="nav__element">
-        <div className="nav__el__content">
+      <div className="nav__element" onClick={() => setIsActive("nav__workers")}>
+        <div
+          className="nav__el__content"
+          id={isActive === "nav__workers" ? "active" : ""}
+        >
           <img src={listOfWorkers} />
           <span className={showOrNot}>List of workes</span>
         </div>
       </div>
-      <div className="nav__element">
-        <div className="nav__el__content">
+      <div className="nav__element" onClick={() => setIsActive("nav__payment")}>
+        <div
+          className="nav__el__content"
+          id={isActive === "nav__payment" ? "active" : ""}
+        >
           <img src={payment} />
           <span className={showOrNot}>Payment</span>
         </div>
       </div>
-      <div className="nav__element">
-        <div className="nav__el__content">
+      <div className="nav__element" onClick={() => setIsActive("nav__group")}>
+        <div
+          className="nav__el__content"
+          id={isActive === "nav__group" ? "active" : ""}
+        >
           <img src={group} />
           <span className={showOrNot}>Group</span>
         </div>

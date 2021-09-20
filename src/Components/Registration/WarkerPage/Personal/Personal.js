@@ -34,7 +34,7 @@ function Personal() {
   };
 
   return (
-    <div className={"row Personal "}>
+    <div className={"row WorkerPersonal "}>
       <div className={"col-md-12"}>
         <div className={"row"}>
           <div className={"col-md-8 mt-0 pt-0"}>
@@ -152,7 +152,7 @@ function Personal() {
             />
           </div>
           <div style={{ color: "#fff" }} className={"col-md-3 radioButton"}>
-            <p>Gender *</p>
+            <p>Gender <span style={{ color: "#EB5757" }}>*</span></p>
             <div className={"radioInput"}>
               <div>
                 Male

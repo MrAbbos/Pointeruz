@@ -1,12 +1,27 @@
 .hide {
   display: none;
 }
+.nav__closed {
+  align-items: center;
+  img {
+    margin: 0px 5px !important;
+  }
+}
 .side__nav {
+  display: flex;
+  flex-direction: column;
+
   font-size: 24px;
   height: 85vh;
-
   position: relative;
-  .side__button {
+  #active {
+    background: #64a3b0;
+  }
+  .nav__reg {
+    padding-top: 60px !important;
+    margin-top: 0;
+  }
+  .nav__button {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -17,16 +32,14 @@
       background: none;
     }
   }
-  #active {
-    background: #64a3b0;
-  }
+
   .nav__element {
     cursor: pointer;
+    padding: 15px 20px 0 10px;
     .nav__el__content {
       display: flex;
       align-items: center;
       border-radius: 5px;
-      margin: 25px 20px 25px 10px;
       padding: 5px;
       img {
         margin-right: 15px;
@@ -48,10 +61,5 @@
         margin: 0 !important;
       }
     }
-  }
-
-  .nav__reg {
-    padding-top: 40px;
-    margin-top: 0;
   }
 }

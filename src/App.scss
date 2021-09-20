@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+  display: none;
+}
 .App {
   .NavbarHeader {
     width: 100%;
@@ -17,7 +20,7 @@
   background: #3f495e;
   .main-body {
     display: flex;
-    padding: 90px 50px;
+    padding: 90px 50px 0 50px;
     transition: all 1s ease;
     .side-bar {
       border-right: 1px solid #64a3b0;

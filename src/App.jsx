@@ -7,7 +7,7 @@ import Registration from "./Components/Registration/Home/Registration";
 import SideNav from "./Components/SideNav/SideNav";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const handling = () => setIsOpen(!isOpen);
 
   let isOpenClass = isOpen ? "open" : "close";

@@ -152,7 +152,7 @@ function Personal() {
             />
           </div>
           <div style={{ color: "#fff" }} className={"col-md-3 radioButton"}>
-            <p>Gender *</p>
+            <p>Gender <span style={{ color: "#EB5757" }}>*</span></p>
             <div className={"radioInput"}>
               <div>
                 Male

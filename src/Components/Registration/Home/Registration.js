@@ -19,7 +19,7 @@ function Registration() {
             <Switch>
               <Route component={StudentPage} path="/Register/students" />
               <Route component={TeacherPage} path="/Register/teachers" />
-              <Route component={WarkerPage} path="/Register/warker" />
+              <Route component={WarkerPage} path="/Register/worker" />
             </Switch>
           </div>
         </div>

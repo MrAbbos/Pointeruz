@@ -11,6 +11,7 @@ $base-color: #79D9EE;
     font-family: Montserrat;
     p{
       margin: 5px;
+      margin-left: 0 !important;
     }
     .radioInput{
       width: 70%;
@@ -18,6 +19,7 @@ $base-color: #79D9EE;
       justify-content: space-between;
     }
     label {
+      margin-left: 5px;
       position: relative;
       input[type="radio"]{
         display: none;
