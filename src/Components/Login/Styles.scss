@@ -6,10 +6,10 @@ $base-color: #79d9ee;
   position: relative;
   .pointerLogo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   .loginForm {
-    width: 380px;
+    width: 350px;
     border-radius: 10px;
     .text {
       text-align: center;
@@ -18,14 +18,13 @@ $base-color: #79d9ee;
       p {
         font-family: Montserrat;
         font-style: normal;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 32px;
         line-height: 39px;
         color: $base-color;
       }
     }
     .Form {
-      padding: 0 50px 70px 50px;
       label {
         width: 100%;
         p {
@@ -41,6 +40,8 @@ $base-color: #79d9ee;
           width: 100%;
           padding: 10px;
           border: 1px solid $base-color;
+          max-height: 50px;
+          height: 50px;
           box-sizing: border-box;
           border-radius: 4px;
           background-color: transparent;
@@ -89,7 +90,9 @@ $base-color: #79d9ee;
         margin-top: 35px;
         border: none;
         padding: 10px;
-        color:#F8F8F8;
+        max-height: 50px;
+        height: 50px;
+        color: #f8f8f8;
         &:focus {
           outline: none;
         }

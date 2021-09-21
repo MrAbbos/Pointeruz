@@ -5,18 +5,37 @@ import Personal from "../PageItem/Personal/Personal";
 import "./Styles.scss";
 import plus from "./img/Vector.svg";
 
+let howManyDirection = [0];
 function StudentPage() {
-  const [howManyDirection, setHowManyDirection] = useState([0]);
+  const [nextTab, setNextTab] = useState(1);
+  // const [howManyDirection, setHowManyDirection] = useState([0]);
+  const [selectedList, setSelectedList] = useState(0);
   const Panel = (props) => {
     return <div>{props.children}</div>;
   };
   const HandleChangePushEducation = () => {
-    setHowManyDirection(howManyDirection.push(0));
+    howManyDirection = howManyDirection.push(0);
   };
+
+  const prevButton = () => {
+    setNextTab((p) => p - 1);
+    setSelectedList((p) => p - 1);
+  };
+  const nextButton = () => {
+    setNextTab((p) => p + 1);
+    setSelectedList((p) => p + 1);
+  };
+  console.log(howManyDirection);
   return (
-    <div>
+    <div className={"Students"}>
       <div className={"TabPage"}>
-        <Tabs selected={0}>
+        <Tabs
+          selectedList={selectedList}
+          setSelectedList={setSelectedList}
+          setNextTab={setNextTab}
+          nextTab={nextTab}
+          selected={0}
+        >
           <Panel title="Personal Details">
             <Personal />
           </Panel>
@@ -31,11 +50,9 @@ function StudentPage() {
                           howManyDirection.length !== index + 1 && "none",
                       }}
                       className={"bottomPlusEdu"}
+                      onClick={HandleChangePushEducation}
                     >
-                      <span
-                        onClick={HandleChangePushEducation}
-                        className={"cirlce-button"}
-                      >
+                      <span className={"cirlce-button"}>
                         <img src={plus} alt="" />
                       </span>
                       <div className={"line-button"}></div>
@@ -51,6 +68,23 @@ function StudentPage() {
             <h1 className={"Finish"}>Finish</h1>
           </Panel>
         </Tabs>
+      </div>
+      <div className={"nextPrevButton"}>
+        <button
+          style={{ display: nextTab === 1 ? "none" : "block" }}
+          onClick={prevButton}
+          className={"prev"}
+        >
+          Prev
+        </button>
+        <div style={{ display: nextTab === 1 ? "block" : "none" }}></div>
+        <button
+          style={{ display: nextTab === 4 ? "none" : "block" }}
+          onClick={nextButton}
+          className={"next"}
+        >
+          Next
+        </button>
       </div>
     </div>
   );

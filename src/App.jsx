@@ -1,36 +1,16 @@
-import { useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Login from "./Components/Login/Login";
-import NavbarHead from "./Components/NavbarHead/NavbarHead";
-import Payments from "./Components/Payments";
-import PaymentAdd from "./Components/Payments/PaymentAdd";
-import Registration from "./Components/Registration/Home/Registration";
-import SideNav from "./Components/SideNav/SideNav";
+import Screens from "./Screens/Screens";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const handling = () => setIsOpen(!isOpen);
-
-  let isOpenClass = isOpen ? "open" : "close";
   return (
     <div className="App">
-      <div className={"NavbarHeader"}>
-        <NavbarHead />
-      </div>
-      <div className="main-body">
-        <div className={`side-bar ${isOpenClass}-side-bar`}>
-          <SideNav isOpen={isOpen} handling={handling} />
-        </div>
-        <div className={`right-body ${isOpenClass}-right-body`}>
-          <Switch className={"body"}>
-            <Route component={Registration} path="/Register" />
-            <Route component={Payments} path="/Payments" />
-            <Route component={PaymentAdd} path="/Payments/add" />
-            <Route component={Login} path="/Login" />
-          </Switch>
-        </div>
-      </div>
+      <Switch className={"body"}>
+        <Route component={Login} path="/Login" />
+        <Route component={Screens} path="/" />
+      </Switch>
     </div>
   );
 }

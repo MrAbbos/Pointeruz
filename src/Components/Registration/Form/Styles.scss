@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap");
 
-$base-color: #79D9EE;
+$base-color: #64a3b0;
 
 .Form {
   .label {
     display: block;
     color: #fff;
+    input {
+      height: 50px;
+      box-sizing: border-box;
+    }
     .seriaPasport {
       display: flex;
       .inputSer {
@@ -19,6 +23,7 @@ $base-color: #79D9EE;
     .Region {
       background-color: transparent;
       width: 100%;
+      box-sizing: border-box;
       padding: 10px;
       border: 1px solid #ffffff;
       border-radius: 4px;
@@ -45,11 +50,12 @@ $base-color: #79D9EE;
     }
     p {
       margin: 0;
-      font-family: "Montserrat", sans-serif;
+      font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
+      color: #f8f8f8;
     }
     input {
       background-color: transparent;
@@ -64,6 +70,11 @@ $base-color: #79D9EE;
         border: 1px solid $base-color;
       }
       &::placeholder {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
         color: rgba(248, 248, 248, 0.15);
       }
     }

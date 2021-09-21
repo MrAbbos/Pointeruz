@@ -1,24 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import Throw from './img/throw.svg'
 import './Styles.scss'
 
 const Tabs = (props) => {
-  const [selected, setSelected] = useState(props.selected || 0);
-  const [nextTab, setNextTab] = useState(1);
   const handleChange = (index) => {
-    setSelected(index);
+    props.setSelectedList(index);
   };
   const handleChangeTitle =(index)=>{
     handleChange(index)
-    setNextTab(index+1)
+    props.setNextTab(index+1)
   }
   return (
     <div>
       <ul className="inline">
         {props.children.map((item, index) => {
-          let style = (index+1) === nextTab ? "tabTitle" : "whited";
-          let styleLi = (index+1) < nextTab ? "whiteText" : "silverText";
-          let styleInput = (index) < nextTab ? "tabTitleInput" : "whitedInput";
+          let style = (index+1) === props.nextTab ? "tabTitle" : "whited";
+          let styleLi = (index+1) < props.nextTab ? "whiteText" : "silverText";
+          let styleInput = (index) < props.nextTab ? "tabTitleInput" : "whitedInput";
           return (
             <div
               id={"tabTitleId"}
@@ -42,7 +40,7 @@ const Tabs = (props) => {
         })}
       </ul>
       <div style={{ padding: "0", paddingTop: "20px" }} className="tab">
-        {props.children[selected]}
+        {props.children[props.selectedList]}
       </div>
     </div>
   );
