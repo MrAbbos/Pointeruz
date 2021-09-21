@@ -5,18 +5,21 @@ import Personal from "../PageItem/Personal/Personal";
 import "./Styles.scss";
 import plus from "./img/Vector.svg";
 
+let howManyDirection = [0];
 function StudentPage() {
-  const [howManyDirection, setHowManyDirection] = useState([0]);
+  const [nextTab, setNextTab] = useState(1);
+  // const [howManyDirection, setHowManyDirection] = useState([0]);
   const Panel = (props) => {
     return <div>{props.children}</div>;
   };
   const HandleChangePushEducation = () => {
-    setHowManyDirection(howManyDirection.push(0));
+    howManyDirection = howManyDirection.push(0);
   };
+  console.log(howManyDirection);
   return (
     <div>
-      <div className={"TabPage"}>
-        <Tabs selected={0}>
+      <div setNextTab={setNextTab} className={"TabPage"}>
+        <Tabs nextTab={nextTab} selected={0}>
           <Panel title="Personal Details">
             <Personal />
           </Panel>
@@ -31,11 +34,9 @@ function StudentPage() {
                           howManyDirection.length !== index + 1 && "none",
                       }}
                       className={"bottomPlusEdu"}
+                      onClick={HandleChangePushEducation}
                     >
-                      <span
-                        onClick={HandleChangePushEducation}
-                        className={"cirlce-button"}
-                      >
+                      <span className={"cirlce-button"}>
                         <img src={plus} alt="" />
                       </span>
                       <div className={"line-button"}></div>

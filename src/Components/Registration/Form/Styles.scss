@@ -6,6 +6,10 @@ $base-color: #79D9EE;
   .label {
     display: block;
     color: #fff;
+    input{
+      height: 50px;
+      box-sizing: border-box;
+    }
     .seriaPasport {
       display: flex;
       .inputSer {
@@ -19,6 +23,7 @@ $base-color: #79D9EE;
     .Region {
       background-color: transparent;
       width: 100%;
+      box-sizing: border-box;
       padding: 10px;
       border: 1px solid #ffffff;
       border-radius: 4px;

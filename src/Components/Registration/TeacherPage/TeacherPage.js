@@ -8,6 +8,7 @@ import plus from './img/Vector.svg'
 // const howManyDirection = [0]
 
 function TeacherPage() {
+  const [nextTab, setNextTab] = useState(1);
   const [howManyDirection,setHowManyDirection] = useState([0])
   const Panel = (props) => {
     return <div>{props.children}</div>;
@@ -18,7 +19,7 @@ function TeacherPage() {
   return (
     <div>
       <div className={"TeacherTabPage"}>
-        <Tabs selected={0}>
+      <Tabs setNextTab={setNextTab} nextTab={nextTab} selected={0}>
           <Panel title="Personal Details">
             <Personal />
           </Panel>

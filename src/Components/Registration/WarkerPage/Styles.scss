@@ -1,7 +1,8 @@
-$base-color: #79D9EE;
-
+$base-color: #79d9ee;
+$color-button:#64a3b0;
 .WarkerPage {
-  .Agreement,.Finish{
+  .Agreement,
+  .Finish {
     height: 60vh;
   }
   .bottomPlusEdu {
@@ -18,7 +19,7 @@ $base-color: #79D9EE;
     .line-button {
       width: 620px;
       height: 1px;
-      background: #64a3b0;
+      background: $color-button;
       margin: -10px 45px;
     }
   }
@@ -45,5 +46,32 @@ $base-color: #79D9EE;
     width: 100%;
     padding: 25px;
     color: #333;
+  }
+  .nextPrevButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding:50px 0;
+    div {
+      width: 300px;
+      display: flex;
+      justify-content: space-around;
+      .next {
+        width: 80px;
+        background-color: $color-button;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        padding: 5px;
+      }
+      .prev {
+        width: 80px;
+        background-color: $color-button;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        padding: 5px;
+      }
+    }
   }
 }

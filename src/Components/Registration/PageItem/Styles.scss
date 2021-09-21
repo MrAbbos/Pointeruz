@@ -1,6 +1,24 @@
 $base-color: #79D9EE;
 
 .TabPage {
+  .bottomPlusEdu {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    .cirlce-button {
+      width: 50px !important ;
+      height: 50px !important ;
+      background-color: $base-color;
+      border-radius: 50%;
+      padding: 5px 10px 10px 10px;
+      cursor: pointer;
+    }
+    .line-button {
+      width: 620px;
+      height: 1px;
+      background: #64a3b0;
+      margin: -10px 45px;
+    }
+  }
   .Agreement,.Finish{
     height: 60vh;
     margin-bottom: 0;
