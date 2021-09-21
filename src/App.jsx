@@ -4,6 +4,7 @@ import "./App.scss";
 import Login from "./Components/Login/Login";
 import NavbarHead from "./Components/NavbarHead/NavbarHead";
 import Payments from "./Components/Payments";
+import PaymentAdd from "./Components/Payments/PaymentAdd";
 import Registration from "./Components/Registration/Home/Registration";
 import SideNav from "./Components/SideNav/SideNav";
 
@@ -25,6 +26,7 @@ function App() {
           <Switch className={"body"}>
             <Route component={Registration} path="/Register" />
             <Route component={Payments} path="/Payments" />
+            <Route component={PaymentAdd} path="/Payments/add" />
             <Route component={Login} path="/Login" />
           </Switch>
         </div>
