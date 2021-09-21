@@ -1,0 +1,52 @@
+$base-color: #79d9ee;
+.SelectInput {
+  //   background: rgba(100, 163, 176, 0.2);
+
+  //   border: 1px solid #64a3b0;
+  //   box-sizing: border-box;
+  //   backdrop-filter: blur(15px);
+
+  //   border-radius: 4px;
+  .SelectLabel {
+    display: flex;
+    justify-content: space-between;
+    .inputAndIcon {
+      position: relative;
+      input {
+        width: 20px;
+        height: 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        transition-duration: 0.3s;
+        background-color: rgba(248, 248, 248, 0.2);
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      .tabTitleInput {
+        background-color: #64a3b0;
+        box-shadow: 0px 0px 20px #64a3b0;
+      }
+      .coloredInput {
+        background-color: #3f495e;
+      }
+      .checkIcon {
+        position: absolute !important;
+        left: 3px !important;
+        width: 25px;
+        height: 25px;
+        top: -2px;
+      }
+    }
+  }
+  background-color: transparent;
+}
+.val {
+  background-color: #64a3b0;
+  color: white;
+  span {
+    color: white;
+    border-radius: 0 !important;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Styles.scss";
-import PointerLogo from "./img/Pointer.svg";
+import PointerLogo from "./img/PointerLogo.svg";
 import eyeSlash from "./img/Group (1).svg";
 import eyeShow from "./img/Group.svg";
 

@@ -1,0 +1,42 @@
+.Screens {
+  .NavbarHeader {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+  }
+
+  .body {
+    padding: 10px;
+  }
+
+  /*by mirabbos*/
+  .base-color {
+    color: #64a3b0;
+  }
+  color: #f8f8f8;
+  background: #3f495e;
+  .main-body {
+    padding: 0 200px;
+    height: 100vh;
+    display: flex;
+    padding: 90px 200px 0 200px;
+    transition: all 1s ease;
+    .side-bar {
+      border-right: 1px solid #64a3b0;
+    }
+    .open-side-bar {
+      width: 25%;
+    }
+    .close-side-bar {
+      width: 15%;
+    }
+    .open-right-body {
+      width: 75%;
+    }
+    .close-right-body {
+      width: 85%;
+    }
+  }
+
+  /*by mirabbos end*/
+}

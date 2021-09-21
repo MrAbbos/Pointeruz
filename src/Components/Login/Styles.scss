@@ -6,10 +6,10 @@ $base-color: #79d9ee;
   position: relative;
   .pointerLogo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   .loginForm {
-    width: 380px;
+    width: 350px;
     border-radius: 10px;
     .text {
       text-align: center;
@@ -18,14 +18,13 @@ $base-color: #79d9ee;
       p {
         font-family: Montserrat;
         font-style: normal;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 32px;
         line-height: 39px;
         color: $base-color;
       }
     }
     .Form {
-      padding: 0 50px 70px 50px;
       label {
         width: 100%;
         p {
