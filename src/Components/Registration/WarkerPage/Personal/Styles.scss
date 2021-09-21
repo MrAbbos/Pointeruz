@@ -1,4 +1,6 @@
 $base-color: #79D9EE;
+$shadow-input:0px 0px 16.4444px #21BCA0, 0px 0px 16.4444px #21BCA0;
+$dark-color:#21BCA0;
 .WorkerPersonal {
   .col-md-6 {
     margin-top: 20px;
@@ -43,11 +45,11 @@ $base-color: #79D9EE;
         width: 20px;
         height: 20px;
         border-radius: 11px;
-        border: 2px solid $base-color;
+        border: 2px solid $dark-color;
       }
       input[type="radio"]:checked +span {
-        background-color: $base-color;
-        box-shadow: 0px 0px 16.4444px $base-color, 0px 0px 16.4444px $base-color;
+        background-color: $dark-color;
+        box-shadow:  0px 0px 16.4444px $dark-color, 0px 0px 16.4444px $dark-color;
       }
     }
   }

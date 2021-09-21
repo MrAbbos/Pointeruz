@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Throw from './img/throw.svg'
 import './Styles.scss'
 
 const Tabs = (props) => {
-  const [selected, setSelected] = useState(props.selected || 0);
   const handleChange = (index) => {
-    setSelected(index);
+    props.setSelectedList(index);
   };
   const handleChangeTitle =(index)=>{
     handleChange(index)
@@ -41,7 +40,7 @@ const Tabs = (props) => {
         })}
       </ul>
       <div style={{ padding: "0", paddingTop: "20px" }} className="tab">
-        {props.children[selected]}
+        {props.children[props.selectedList]}
       </div>
     </div>
   );

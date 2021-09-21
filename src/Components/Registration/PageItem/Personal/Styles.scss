@@ -1,4 +1,6 @@
-$base-color: #79D9EE;
+$base-color: #79d9ee;
+$shadow-input: 0px 0px 16.4444px #21bca0, 0px 0px 16.4444px #21bca0;
+$dark-color:#21bca0;
 .Personal {
   .col-md-6 {
     margin-top: 20px;
@@ -8,11 +10,11 @@ $base-color: #79D9EE;
   }
   .radioButton {
     font-family: Montserrat;
-    p{
+    p {
       margin: 5px;
       margin-left: 0 !important;
     }
-    .radioInput{
+    .radioInput {
       width: 70%;
       display: flex;
       justify-content: space-between;
@@ -20,11 +22,11 @@ $base-color: #79D9EE;
     label {
       margin-left: 5px;
       position: relative;
-      input[type="radio"]{
+      input[type="radio"] {
         display: none;
         margin-left: 5px;
       }
-      span{
+      span {
         margin-left: 5px;
         top: 9px;
         left: -1px;
@@ -43,11 +45,11 @@ $base-color: #79D9EE;
         width: 20px;
         height: 20px;
         border-radius: 11px;
-        border: 2px solid $base-color;
+        border: 2px solid $dark-color;
       }
-      input[type="radio"]:checked +span {
-        background-color: $base-color;
-        box-shadow: 0px 0px 16.4444px #21BCA0, 0px 0px 16.4444px #21BCA0;
+      input[type="radio"]:checked + span {
+        background-color: $dark-color;
+        box-shadow: 0px 0px 16.4444px $dark-color, 0px 0px 16.4444px $dark-color;
       }
     }
   }
@@ -55,7 +57,7 @@ $base-color: #79D9EE;
     margin-top: 40px;
     text-align: center;
     .uploadImageButton {
-      background-color: #64A3B0;
+      background-color: #64a3b0;
       font-family: Montserrat;
       padding: 10px;
       font-style: normal;

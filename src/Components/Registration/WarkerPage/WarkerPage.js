@@ -10,22 +10,31 @@ import plus from "./img/Vector.svg";
 function WarkerPage() {
   const [howManyDirection, setHowManyDirection] = useState([0]);
   const [nextTab, setNextTab] = useState(1);
+  const [selectedList, setSelectedList] = useState(0);
   const Panel = (props) => {
     return <div>{props.children}</div>;
   };
   const HandleChangePushEducation = () => {
     setHowManyDirection(howManyDirection.push(0));
   };
-  const prevButton=()=>{
-    setNextTab(p=>p-1)
-  }
-  const nextButton=()=>{
-    setNextTab(p=>p+1)
-  }
+  const prevButton = () => {
+    setNextTab((p) => p - 1);
+    setSelectedList((p) => p - 1);
+  };
+  const nextButton = () => {
+    setNextTab((p) => p + 1);
+    setSelectedList((p) => p + 1);
+  };
   return (
-    <div>
+    <div className={"Workers"} >
       <div className={"WarkerPage"}>
-        <Tabs setNextTab={setNextTab} nextTab={nextTab} selected={0}>
+        <Tabs
+          selectedList={selectedList}
+          setSelectedList={setSelectedList}
+          setNextTab={setNextTab}
+          nextTab={nextTab}
+          selected={0}
+        >
           <Panel title="Personal Details">
             <Personal />
           </Panel>
@@ -60,12 +69,23 @@ function WarkerPage() {
             <h1 className={"Finish"}>Finish</h1>
           </Panel>
         </Tabs>
-        <div className={"nextPrevButton"}>
-          <div>
-            <button onClick={prevButton} className={"prev"}>Prev</button>
-            <button onClick={nextButton} className={"next"}>Next</button>
-          </div>
-        </div>
+      </div>
+      <div className={"nextPrevButton"}>
+        <button
+          style={{ display: nextTab === 1 ? "none" : "block" }}
+          onClick={prevButton}
+          className={"prev"}
+        >
+          Prev
+        </button>
+        <div style={{ display: nextTab === 1 ? "block" : "none" }}></div>
+        <button
+          style={{ display: nextTab === 4 ? "none" : "block" }}
+          onClick={nextButton}
+          className={"next"}
+        >
+          Next
+        </button>
       </div>
     </div>
   );

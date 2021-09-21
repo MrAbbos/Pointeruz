@@ -34,13 +34,11 @@ function Form({
           <div className={"seriaPasport"}>
             <input
               className={"inputSer"}
-              type="text"
               placeholder={placeholder1}
               type={typeSer}
             />
             <input
               className={"inputNum"}
-              type="text"
               placeholder={placeholder2}
               type={typeNum}
             />
@@ -59,7 +57,6 @@ function Form({
         ) : (
           <input
             className={"input"}
-            type="text"
             placeholder={placeholder}
             type={type}
           />
