@@ -89,6 +89,8 @@ function Personal() {
                   type={"seriaPasport"}
                   typeSer={"string"}
                   typeNum={"number"}
+                  maxLength1={"2"}
+                  maxLength2={"7"}
                 />
               </div>
               <div className={"col-md-6"}>
@@ -136,7 +138,7 @@ function Personal() {
       </div>
       <div className={"col-12"}>
         <div className={"row"}>
-          <div className={"col-md-4 mt-1"}>
+          <div className={"col-md-4"}>
             <Form
               label={"Region"}
               placeholder={"Choose student’s location"}
@@ -144,7 +146,7 @@ function Personal() {
               type={"select"}
             />
           </div>
-          <div className={"col-md-5 mt-1"}>
+          <div className={"col-md-5"}>
             <Form
               label={"Address"}
               placeholder={"Enter student’s address"}
@@ -154,26 +156,32 @@ function Personal() {
           <div style={{ color: "#fff" }} className={"col-md-3 radioButton"}>
             <p>Gender <span style={{ color: "#EB5757" }}>*</span></p>
             <div className={"radioInput"}>
-              <div>
-                Male
-                <label>
-                  <input
-                    name={"radio"}
-                    type="radio"
-                    value="Male"
-                  />
-                  <span></span>
+            <div className={"radioInputDiv"}>
+                <label for={"myCheckMale"}>
+                  Male
+                  <div>
+                    <input
+                      id={"myCheckMale"}
+                      name={"radio"}
+                      type="radio"
+                      value="Male"
+                    />
+                    <span></span>
+                  </div>
                 </label>
               </div>
-              <div>
-                Female
-                <label>
-                  <input
-                    name={"radio"}
-                    type="radio"
-                    value="Female"
-                  />
-                  <span></span>
+              <div className={"radioInputDiv"}>
+                <label for={"myCheckFemale"}>
+                  Female
+                  <div>
+                    <input
+                      id={"myCheckFemale"}
+                      name={"radio"}
+                      type="radio"
+                      value="Female"
+                    />
+                    <span></span>
+                  </div>
                 </label>
               </div>
             </div>

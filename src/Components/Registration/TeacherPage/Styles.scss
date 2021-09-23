@@ -2,6 +2,9 @@ $base-color: #79d9ee;
 $color-button: #64a3b0;
 $color-silver: #333;
 .Teachers {
+  .col-md-5,.col-md-4,.col-md-6{
+    margin-top: 30px;
+  }
   .TeacherTabPage {
     height: 70vh;
     .bottomPlusEdu {

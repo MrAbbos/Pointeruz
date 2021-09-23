@@ -8,14 +8,42 @@ import plus from "./img/Vector.svg";
 let howManyDirection = [0];
 function StudentPage() {
   const [nextTab, setNextTab] = useState(1);
-  // const [howManyDirection, setHowManyDirection] = useState([0]);
   const [selectedList, setSelectedList] = useState(0);
+
+  const [studentData,setStudentDate] = useState({
+    address:"",
+    balance:"",
+    birthDay:"",
+    courseLang:"",
+    courserId:"",
+    directionStudy:"",
+    email:"",
+    gender:"",
+    lastName:"",
+    name:"",
+    nation:"",
+    parentsNumber:[],
+    pasportNumber:"",
+    pasportSeries:"",
+    password:"",
+    phoneNumber:"",
+    region:"",
+    result:"",
+    sureName:"",
+    teacherId:"",
+  })
+
+  console.log(studentData.name)
+
   const Panel = (props) => {
     return <div>{props.children}</div>;
   };
   const HandleChangePushEducation = () => {
     howManyDirection = howManyDirection.push(0);
   };
+
+
+
 
   const prevButton = () => {
     setNextTab((p) => p - 1);
@@ -25,7 +53,6 @@ function StudentPage() {
     setNextTab((p) => p + 1);
     setSelectedList((p) => p + 1);
   };
-  console.log(howManyDirection);
   return (
     <div className={"Students"}>
       <div className={"TabPage"}>
@@ -37,7 +64,7 @@ function StudentPage() {
           selected={0}
         >
           <Panel title="Personal Details">
-            <Personal />
+            <Personal studentData={studentData} setStudentDate={setStudentDate} />
           </Panel>
           <Panel title="Education">
             {howManyDirection

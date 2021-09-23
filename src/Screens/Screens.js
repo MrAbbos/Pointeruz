@@ -5,6 +5,7 @@ import Login from "../Components/Login/Login";
 import NavbarHead from "../Components/NavbarHead/NavbarHead";
 import Registration from "../Components/Registration/Home/Registration";
 import SideNav from "../Components/SideNav/SideNav";
+import Payments from '../Components/Payments/index'
 
 function Screens() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,7 @@ function Screens() {
         </div>
         <div className={`right-body ${isOpenClass}-right-body`}>
           <Switch className={"body"}>
+            <Route component={Payments} path="/Payments" />
             <Route component={Registration} path="/Register" />
             <Route component={Login} path="/Login" />
           </Switch>

@@ -1,10 +1,16 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Form from "../../Form/Form";
 import { direction, teacherLanguage, teacher } from "./Data";
 import Example from "../../SelectInput/Select";
 import "./Styles.scss";
 
-function Education() {
+import { connect } from "react-redux";
+import { getCourse  } from "../../../../Api/Store/Slice";
+
+function Education({course,getCourse}) {
+  useEffect(() => {
+    getCourse();
+  })
   return (
     <div className={"TeacherEducatoion"}>
       <div className={"row"}>
@@ -12,7 +18,7 @@ function Education() {
           <Form
             label={"Direction of study"}
             placeholder={"Frontend"}
-            data={direction}
+            data={course}
             type={"select"}
           />
         </div>
@@ -104,15 +110,11 @@ function Education() {
             type={"text"}
           />
         </div>
-        {/* <div className={"col-md-4 levelLanguage "}>
-          <label>
-            Level language <span style={{ color: "#EB5757" }}>*</span>
-            <button className>Enter student’s level language</button>
-          </label>
-        </div> */}
       </div>
     </div>
   );
 }
 
-export default Education;
+export default connect(({ Slice: { course,teacher } }) => ({ course,teacher }), { getCourse })(
+  Education
+);

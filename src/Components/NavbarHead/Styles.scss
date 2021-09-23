@@ -4,7 +4,7 @@ $base-color: #79d9ee;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 300px 0 300px;
+  padding: 20px 200px 0 200px;
   align-items: center;
   background-color: #243047;
   box-shadow: 0px 0px 30px #7097e5;
@@ -17,7 +17,7 @@ $base-color: #79d9ee;
   }
   .user {
     display: flex;
-    width: 350px;
+    width: 400px;
     justify-content: space-between;
     .searchButton {
       height: 100%;
@@ -43,6 +43,7 @@ $base-color: #79d9ee;
         font-size: 18px;
         line-height: 22px;
         color: #79d9ee;
+        margin-left: 10px;
       }
     }
   }

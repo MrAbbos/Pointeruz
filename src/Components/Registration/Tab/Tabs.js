@@ -29,7 +29,7 @@ const Tabs = (props) => {
                   heigth: "14px",
                   position: "absolute",
                   left: "9.5px",
-                  top: "31px",
+                  top: "30.5px",
                   display:styleInput!=="tabTitleInput"?"none":"block"
                 }} src={Throw} alt="" />
               <li className={styleLi} key={index} onClick={()=>handleChangeTitle(index)}>
