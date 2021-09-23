@@ -51,13 +51,13 @@
     background: #64a3b0;
   }
   .nav__reg {
-    padding-top: 60px !important;
+    padding-top: 74px !important;
     margin-top: 0;
   }
   .nav__button {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 20px;
     display: flex;
     justify-content: flex-end !important;
     button {
@@ -68,7 +68,7 @@
 
   .nav__element {
     cursor: pointer;
-    padding: 15px 20px 0 10px;
+    padding: 20px 20px 0 10px;
     .nav__el__content {
       display: flex;
       align-items: center;

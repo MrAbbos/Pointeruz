@@ -8,6 +8,7 @@ import payment from "./img/payment.svg";
 import group from "./img/group.svg";
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import exit from "./img/exit.svg";
 
 const SideNav = ({ isOpen, handling }) => {
   const [isActive, setIsActive] = useState("");
@@ -119,6 +120,15 @@ const SideNav = ({ isOpen, handling }) => {
         >
           <img src={group} />
           <span>Group</span>
+        </div>
+      </div>
+      <div className="nav__element" onClick={() => setIsActive("nav__group")}>
+        <div
+          className={`nav__el__content ${showOrNot}`}
+          id={isActive === "nav__group" ? "active" : ""}
+        >
+          <img src={exit} />
+          <span>exit</span>
         </div>
       </div>
     </div>
