@@ -100,7 +100,7 @@ const SideNav = ({ isOpen, handling }) => {
       </div>
       <div className="nav__element" onClick={() => setIsActive("nav__payment")}>
         <NavLink
-          to="/Payments"
+          to="/payment"
           style={{ textDecoration: "none", color: "white" }}
         >
           <div
