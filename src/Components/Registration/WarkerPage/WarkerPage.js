@@ -5,17 +5,16 @@ import Personal from "./Personal/Personal";
 import "./Styles.scss";
 import plus from "./img/Vector.svg";
 
-// const howManyDirection = [0]
-
 function WarkerPage() {
-  const [howManyDirection, setHowManyDirection] = useState([0]);
   const [nextTab, setNextTab] = useState(1);
   const [selectedList, setSelectedList] = useState(0);
+  const [howManyDirection, setHowManyDirection] = useState([0]);
+
   const Panel = (props) => {
     return <div>{props.children}</div>;
   };
   const HandleChangePushEducation = () => {
-    setHowManyDirection(howManyDirection.push(0));
+    setHowManyDirection([...howManyDirection, 0]);
   };
   const prevButton = () => {
     setNextTab((p) => p - 1);
@@ -26,7 +25,7 @@ function WarkerPage() {
     setSelectedList((p) => p + 1);
   };
   return (
-    <div className={"Workers"} >
+    <div className={"Workers"}>
       <div className={"WarkerPage"}>
         <Tabs
           selectedList={selectedList}
@@ -39,28 +38,30 @@ function WarkerPage() {
             <Personal />
           </Panel>
           <Panel title="Education">
-            {howManyDirection
-              ? howManyDirection.map((item, index) => (
-                  <div>
-                    <Education />
-                    <div
-                      style={{
-                        display:
-                          howManyDirection.length !== index + 1 && "none",
-                      }}
-                      className={"bottomPlusEdu"}
-                    >
-                      <span
-                        onClick={HandleChangePushEducation}
-                        className={"cirlce-button"}
+            <div className={"Education"} >
+              {howManyDirection
+                ? howManyDirection.map((item, index) => (
+                    <div>
+                      <Education />
+                      <div
+                        style={{
+                          display:
+                            howManyDirection.length !== index + 1 && "none",
+                        }}
+                        className={"bottomPlusEdu"}
                       >
-                        <img src={plus} alt="" />
-                      </span>
-                      <div className={"line-button"}></div>
+                        <span
+                          onClick={HandleChangePushEducation}
+                          className={"cirlce-button"}
+                        >
+                          <img src={plus} alt="" />
+                        </span>
+                        <div className={"line-button"}></div>
+                      </div>
                     </div>
-                  </div>
-                ))
-              : ""}
+                  ))
+                : ""}
+            </div>
           </Panel>
           <Panel title="Agreement">
             <h1 className={"Agreement"}>Agreement</h1>

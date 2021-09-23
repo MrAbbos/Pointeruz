@@ -11,6 +11,8 @@ function Education({course,getCourse}) {
   useEffect(() => {
     getCourse();
   })
+
+  
   return (
     <div className={"TeacherEducatoion"}>
       <div className={"row"}>

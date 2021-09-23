@@ -7,6 +7,7 @@ import data from "./Data";
 import { connect } from "react-redux";
 
 function Personal({ course, getCourse, setStudentDate, studentData }) {
+  console.log(studentData)
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
   const [fake, setFake] = useState("");
@@ -55,6 +56,7 @@ function Personal({ course, getCourse, setStudentDate, studentData }) {
                   placeholder={"Enter student’s name"}
                   type={"text"}
                   value={studentData.name}
+                  setValue={"name"}
                   studentData={studentData}
                   setStudentDate={setStudentDate}
                 />

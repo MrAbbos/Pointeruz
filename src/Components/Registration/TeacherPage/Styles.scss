@@ -7,6 +7,10 @@ $color-silver: #333;
   }
   .TeacherTabPage {
     height: 70vh;
+    .Education{
+      overflow-y:scroll ;
+      height: 50vh;
+    }
     .bottomPlusEdu {
       padding-top: 30px;
       padding-bottom: 50px;
@@ -52,7 +56,7 @@ $color-silver: #333;
   }
   .nextPrevButton {
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
     display: flex;
     justify-content: space-between;
     .next {

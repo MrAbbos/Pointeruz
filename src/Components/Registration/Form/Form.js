@@ -26,7 +26,8 @@ function Form({
   maxLength2,
   value,
   setStudentDate,
-  studentData
+  studentData,
+  setValue
 }) {
   const [phoneNumber, setPhoneNumber] = useState("+998");
   const [selectedDate, setSelectedDate] = useState(
@@ -85,7 +86,7 @@ function Form({
           // value={value}
           //  onChange={e =>
           //   setStudentDate({
-          //     ...studentData,value: e.target.value,
+          //     ...studentData,setValue: e.target.value,
           //   })}
            className={"input"} placeholder={placeholder} type={type} />
         )}

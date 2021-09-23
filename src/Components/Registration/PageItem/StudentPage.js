@@ -5,45 +5,40 @@ import Personal from "../PageItem/Personal/Personal";
 import "./Styles.scss";
 import plus from "./img/Vector.svg";
 
-let howManyDirection = [0];
 function StudentPage() {
   const [nextTab, setNextTab] = useState(1);
   const [selectedList, setSelectedList] = useState(0);
+  const [howManyDirection, setHowManyDirection] = useState([0]);
 
-  const [studentData,setStudentDate] = useState({
-    address:"",
-    balance:"",
-    birthDay:"",
-    courseLang:"",
-    courserId:"",
-    directionStudy:"",
-    email:"",
-    gender:"",
-    lastName:"",
-    name:"",
-    nation:"",
-    parentsNumber:[],
-    pasportNumber:"",
-    pasportSeries:"",
-    password:"",
-    phoneNumber:"",
-    region:"",
-    result:"",
-    sureName:"",
-    teacherId:"",
-  })
-
-  console.log(studentData.name)
+  const [studentData, setStudentDate] = useState({
+    address: "",
+    balance: "",
+    birthDay: "",
+    courseLang: "",
+    courserId: "",
+    directionStudy: "",
+    email: "",
+    gender: "",
+    lastName: "",
+    name: "",
+    nation: "",
+    parentsNumber: [],
+    pasportNumber: "",
+    pasportSeries: "",
+    password: "",
+    phoneNumber: "",
+    region: "",
+    result: "",
+    sureName: "",
+    teacherId: "",
+  });
 
   const Panel = (props) => {
     return <div>{props.children}</div>;
   };
   const HandleChangePushEducation = () => {
-    howManyDirection = howManyDirection.push(0);
+    setHowManyDirection([...howManyDirection, 0]);
   };
-
-
-
 
   const prevButton = () => {
     setNextTab((p) => p - 1);
@@ -64,29 +59,34 @@ function StudentPage() {
           selected={0}
         >
           <Panel title="Personal Details">
-            <Personal studentData={studentData} setStudentDate={setStudentDate} />
+            <Personal
+              studentData={studentData}
+              setStudentDate={setStudentDate}
+            />
           </Panel>
           <Panel title="Education">
-            {howManyDirection
-              ? howManyDirection.map((item, index) => (
-                  <div>
-                    <Education />
-                    <div
-                      style={{
-                        display:
-                          howManyDirection.length !== index + 1 && "none",
-                      }}
-                      className={"bottomPlusEdu"}
-                      onClick={HandleChangePushEducation}
-                    >
-                      <span className={"cirlce-button"}>
-                        <img src={plus} alt="" />
-                      </span>
-                      <div className={"line-button"}></div>
+            <div className={"Education"}>
+              {howManyDirection
+                ? howManyDirection.map((item, index) => (
+                    <div>
+                      <Education />
+                      <div
+                        style={{
+                          display:
+                            howManyDirection.length !== index + 1 && "none",
+                        }}
+                        className={"bottomPlusEdu"}
+                        onClick={HandleChangePushEducation}
+                      >
+                        <span className={"cirlce-button"}>
+                          <img src={plus} alt="" />
+                        </span>
+                        <div className={"line-button"}></div>
+                      </div>
                     </div>
-                  </div>
-                ))
-              : ""}
+                  ))
+                : ""}
+            </div>
           </Panel>
           <Panel title="Agreement">
             <h1 className={"Agreement"}>Agreement</h1>
