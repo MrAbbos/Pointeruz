@@ -3,6 +3,7 @@
     width: 100%;
     position: fixed;
     z-index: 999;
+    height: 100px;
   }
 
   .body {
@@ -19,7 +20,7 @@
     padding: 0 200px;
     height: 100vh;
     display: flex;
-    padding: 90px 200px 0 200px;
+    padding: 95px 200px 0 200px;
     transition: all 1s ease;
     .side-bar {
       border-right: 1px solid #64a3b0;
