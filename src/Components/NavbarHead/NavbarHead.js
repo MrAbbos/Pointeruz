@@ -31,13 +31,15 @@ function NavbarHead() {
             style={{ fill: "#fff", fontSize: "30px" }}
           />
         </Badge>
-        <div className={"avatar"}>
-          <img src={User} alt="" />
-        </div>
-        <div className={"userFullName"}>
-          <p>
-            Asadbek <br /> Bektayev
-          </p>
+        <div className={"d-flex"} >
+          <div className={"avatar"}>
+            <img src={User} alt="" />
+          </div>
+          <div className={"userFullName"}>
+            <p>
+              Asadbek <br /> Bektayev
+            </p>
+          </div>
         </div>
       </div>
     </div>

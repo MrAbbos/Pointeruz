@@ -1,13 +1,13 @@
 const data = [
-  { option: "Toshkent" },
-  { option: "Samarqand" },
-  { option: "Jizzax" },
-  { option: "Buxoro" },
-  { option: "Namangan" },
-  { option: "Qashqadaryo" },
-  { option: "Qoraqalpog'iston" },
-  { option: "Andijon" },
-  { option: "Farg'ona" },
-  { option: "Surxandaryo" },
+  { name: "Toshkent" },
+  { name: "Samarqand" },
+  { name: "Jizzax" },
+  { name: "Buxoro" },
+  { name: "Namangan" },
+  { name: "Qashqadaryo" },
+  { name: "Qoraqalpog'iston" },
+  { name: "Andijon" },
+  { name: "Farg'ona" },
+  { name: "Surxandaryo" },
 ];
 export default data;

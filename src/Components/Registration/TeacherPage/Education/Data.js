@@ -1,19 +1,19 @@
 export const direction = [
-  { option: "Frontend" },
-  { option: "Backend" },
-  { option: "DataScines" },
+  { name: "Frontend" },
+  { name: "Backend" },
+  { name: "DataScines" },
 ];
 
 export const language = [
-  { option: "Frontend" },
-  { option: "Backend" },
-  { option: "DataScines" },
+  { name: "Frontend" },
+  { name: "Backend" },
+  { name: "DataScines" },
 ];
 
 export const teacher = [
-  { option: "Frontend" },
-  { option: "Backend" },
-  { option: "DataScines" },
+  { name: "Frontend" },
+  { name: "Backend" },
+  { name: "DataScines" },
 ];
 
 export const teacherLanguage = [

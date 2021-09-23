@@ -1,61 +1,42 @@
-$base-color: #79D9EE;
+$base-color: #79d9ee;
+$shadow-input: 0px 0px 16.4444px #21bca0, 0px 0px 16.4444px #21bca0;
+$dark-color: #21bca0;
 .Personal {
-  .col-md-6 {
-    margin-top: 20px;
-  }
-  .col-md-4 {
-    margin-top: 20px;
-  }
   .radioButton {
     font-family: Montserrat;
-    p{
+    p {
       margin: 5px;
       margin-left: 0 !important;
+      margin-top: 0;
     }
-    .radioInput{
+    .radioInput {
       width: 70%;
       display: flex;
       justify-content: space-between;
-    }
-    label {
-      margin-left: 5px;
-      position: relative;
-      input[type="radio"]{
-        display: none;
-        margin-left: 5px;
-      }
-      span{
-        margin-left: 5px;
-        top: 9px;
-        left: -1px;
-        border-radius: 11px;
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        display: block;
-      }
-      &::after {
-        content: " ";
-        display: inline-block;
-        position: relative;
-        top: 5px;
-        margin: 0 5px 0 0;
-        width: 20px;
-        height: 20px;
-        border-radius: 11px;
-        border: 2px solid $base-color;
-      }
-      input[type="radio"]:checked +span {
-        background-color: $base-color;
-        box-shadow: 0px 0px 16.4444px #21BCA0, 0px 0px 16.4444px #21BCA0;
+      margin-top: 13px;
+      .radioInputDiv {
+        display: flex;
+        label {
+          cursor: pointer;
+          display: flex;
+        }
+        div {
+          margin-left: 5px;
+          position: relative;
+          input[type="radio"] {
+            accent-color: $base-color;
+            transform: scale(1.1);
+            margin-top: 6px;
+          }
+        }
       }
     }
   }
   .uploadImage {
-    margin-top: 40px;
+    margin-top: 70px;
     text-align: center;
     .uploadImageButton {
-      background-color: #64A3B0;
+      background-color: #64a3b0;
       font-family: Montserrat;
       padding: 10px;
       font-style: normal;

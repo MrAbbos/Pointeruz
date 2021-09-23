@@ -8,20 +8,63 @@ import plus from "./img/Vector.svg";
 let howManyDirection = [0];
 function StudentPage() {
   const [nextTab, setNextTab] = useState(1);
-  // const [howManyDirection, setHowManyDirection] = useState([0]);
+  const [selectedList, setSelectedList] = useState(0);
+
+  const [studentData,setStudentDate] = useState({
+    address:"",
+    balance:"",
+    birthDay:"",
+    courseLang:"",
+    courserId:"",
+    directionStudy:"",
+    email:"",
+    gender:"",
+    lastName:"",
+    name:"",
+    nation:"",
+    parentsNumber:[],
+    pasportNumber:"",
+    pasportSeries:"",
+    password:"",
+    phoneNumber:"",
+    region:"",
+    result:"",
+    sureName:"",
+    teacherId:"",
+  })
+
+  console.log(studentData.name)
+
   const Panel = (props) => {
     return <div>{props.children}</div>;
   };
   const HandleChangePushEducation = () => {
     howManyDirection = howManyDirection.push(0);
   };
-  console.log(howManyDirection);
+
+
+
+
+  const prevButton = () => {
+    setNextTab((p) => p - 1);
+    setSelectedList((p) => p - 1);
+  };
+  const nextButton = () => {
+    setNextTab((p) => p + 1);
+    setSelectedList((p) => p + 1);
+  };
   return (
-    <div>
-      <div setNextTab={setNextTab} className={"TabPage"}>
-        <Tabs nextTab={nextTab} selected={0}>
+    <div className={"Students"}>
+      <div className={"TabPage"}>
+        <Tabs
+          selectedList={selectedList}
+          setSelectedList={setSelectedList}
+          setNextTab={setNextTab}
+          nextTab={nextTab}
+          selected={0}
+        >
           <Panel title="Personal Details">
-            <Personal />
+            <Personal studentData={studentData} setStudentDate={setStudentDate} />
           </Panel>
           <Panel title="Education">
             {howManyDirection
@@ -52,6 +95,23 @@ function StudentPage() {
             <h1 className={"Finish"}>Finish</h1>
           </Panel>
         </Tabs>
+      </div>
+      <div className={"nextPrevButton"}>
+        <button
+          style={{ display: nextTab === 1 ? "none" : "block" }}
+          onClick={prevButton}
+          className={"prev"}
+        >
+          Prev
+        </button>
+        <div style={{ display: nextTab === 1 ? "block" : "none" }}></div>
+        <button
+          style={{ display: nextTab === 4 ? "none" : "block" }}
+          onClick={nextButton}
+          className={"next"}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
