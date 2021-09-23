@@ -210,7 +210,6 @@ function Personal({ course, getCourse, setStudentDate, studentData }) {
                       checked={gender === "male"}
                       onChange={handleChangeRadioInput}
                     />
-                    <span></span>
                   </div>
                 </label>
               </div>
@@ -226,7 +225,6 @@ function Personal({ course, getCourse, setStudentDate, studentData }) {
                       checked={gender === "female"}
                       onChange={handleChangeRadioInput}
                     />
-                    <span></span>
                   </div>
                 </label>
               </div>

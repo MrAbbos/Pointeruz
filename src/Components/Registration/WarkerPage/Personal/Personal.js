@@ -168,7 +168,6 @@ function Personal() {
                       type="radio"
                       value="Male"
                     />
-                    <span></span>
                   </div>
                 </label>
               </div>
@@ -182,7 +181,6 @@ function Personal() {
                       type="radio"
                       value="Female"
                     />
-                    <span></span>
                   </div>
                 </label>
               </div>
