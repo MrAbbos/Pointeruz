@@ -122,15 +122,6 @@ const SideNav = ({ isOpen, handling }) => {
           <span>Group</span>
         </div>
       </div>
-      <div className="nav__element" onClick={() => setIsActive("nav__group")}>
-        <div
-          className={`nav__el__content ${showOrNot}`}
-          id={isActive === "nav__group" ? "active" : ""}
-        >
-          <img src={exit} />
-          <span>exit</span>
-        </div>
-      </div>
     </div>
   );
 };
